@@ -248,7 +248,7 @@ def exit_with_error(message):
 
 
 if __name__ == "__main__":
-    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    __location__ = os.path.join(os.path.expanduser('~'), '.config', 'auto-selfcontrol')
     sys.excepthook = excepthook
 
     syslog.openlog("Auto-SelfControl")
