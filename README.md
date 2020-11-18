@@ -13,7 +13,7 @@ You can plan for every weekday if and when SelfControl should start and stop.
 
 The easiest way to install Auto-SelfControl is with [Homebrew](https://brew.sh/). Install Auto-SelfControl by running the following command in the Terminal:
 
-    brew tap sbibauw/utils
+    brew tap andreasgrill/utils
     brew install auto-selfcontrol
 
 If you already have [SelfControl](http://selfcontrolapp.com), start it and **backup your blacklist** as it might get overridden by Auto-SelfControl. 
@@ -32,7 +32,9 @@ Run from this specific repository
 
     ./auto-selfcontrol <config|activate|help>
 
-Or create a symlink in your `/usr/local/bin` folder to access it from anywhere.
+Optionally create a symlink in your `/usr/local/bin` folder to access it from anywhere:
+
+    sudo ln -s ./auto-selfcontrol /usr/local/bin/auto-selfcontrol 
 
 ## Usage
 
@@ -54,6 +56,10 @@ To remove the application (if installed with Homebrew):
     brew uninstall auto-selfcontrol
 
 Or, manually, by removing the directory where you installed the files.
+
+    sudo unlink /usr/local/bin/auto-selfcontrol
+    sudo rm -rf /usr/local/etc/auto-selfcontrol
+    rm -rf ~/auto-selfcontrol
 
 You also need to remove the automatic schedule by executing the following command in the Terminal:
 
